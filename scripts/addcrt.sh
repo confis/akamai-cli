@@ -2,7 +2,7 @@
 File= "/home/runner/work/akamai-cli/akamai-cli/domain/domainlist.txt"
  while IFS= read -r line
  do
-   cat ./scripts/sample.yml | sed 's/foo.com/'$line'/g' > ./crt/$line.yml
+   cat /home/runner/work/akamai-cli/akamai-cli/scripts/sample.yml | sed 's/foo.com/'$line'/g' > /home/runner/work/akamai-cli/akamai-cli/crt/$line.yml
    echo "domain: $line"
    cd /home/runner/work/akamai-cli/akamai-cli/crt
    git add $line.yml
