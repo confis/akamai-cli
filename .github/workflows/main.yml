@@ -24,7 +24,7 @@ jobs:
     - name: Commit files  # transfer the new yml files back into the crt repository
       run: |
         git config --local user.name  ${{ github.actor }}
-        git add ./crt/foo.yml
+        git add /home/runner/work/akamai-cli/akamai-cli/crt/foo.yml
         git commit -m "Updating the repository GitHub crt pages in the crt folder"
     - name: Push changes  # push the output folder to your repo
       uses: ad-m/github-push-action@master
